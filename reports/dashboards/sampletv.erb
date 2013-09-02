@@ -1,0 +1,50 @@
+<script type='text/javascript'>
+$(function() {
+  // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
+  Dashing.gridsterLayout('[{"col":2,"row":1},{"col":1,"row":1},{"col":3,"row":1},{"col":2,"row":2},{"col":3,"row":2},{"col":1,"row":2},{"col":5,"row":1},{"col":4,"row":2},{"col":2,"row":3}]')
+  Dashing.widget_base_dimensions = [370, 340]
+  Dashing.numColumns = 5
+});
+</script>
+
+<script type='text/javascript'>
+$(function() {
+Dashing.gridsterLayout('[{"col":2,"row":1,"size_x":1,"size_y":1},{"col":1,"row":1,"size_x":1,"size_y":1},{"col":3,"row":1,"size_x":2,"size_y":2},{"col":1,"row":2,"size_x":2,"size_y":1}]')
+});
+</script>
+<script type='text/javascript'>
+$(function() {
+Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},{"col":2,"row":1,"size_x":2,"size_y":2},{"col":1,"row":2,"size_x":1,"size_y":1},{"col":4,"row":1,"size_x":2,"size_y":2}]')
+});
+</script>
+
+<% content_for :title do %>1080p dashboard<% end %>
+
+<div class="gridster">
+  <ul>
+    <!--<li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-view="Clock" style="background-color:#009699;"></div>
+      <i class="icon-time icon-background"></i>
+    </li> -->
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1" >
+      <div data-view="Image" data-image="/myob_logo.png"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="2">
+      <div data-id="reports_coverage" data-view="Graph" data-title="RF Unit Coverage" style="background-color:#eab80f;" data-moreinfo="Unit Coverage of Reports and Forms Assembly" ></div>
+    </li>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="newstack_coverage" data-view="Graph" data-title="New Stack Coverage" style="background-color:#ec6915;" data-moreinfo="Coverage of ARLive Assemblies" ></div>
+    </li>
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="2">
+      <div data-id="mainline_unit_coverage" data-view="Graph" data-title="AccountRight Overall Unit Coverage" style="background-color:#2aabe1;" data-moreinfo="Coverage of All AccountRight assemblies using nunit" ></div>
+    </li>
+
+    <!--<li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+      <div data-id="twitter_mentions" data-view="Comments" style="background-color:#ff9618;" data-moreinfo="Tweets tagged with #todayilearned"></div>
+      <i class="icon-twitter icon-background"></i>
+    </li> -->
+
+  </ul>
+</div>
